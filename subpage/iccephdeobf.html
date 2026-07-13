@@ -190,6 +190,15 @@
       <button id="run">&gt;_ deobfuscate</button>
     </div>
 
+    <noscript>
+      <style>
+        button#run {
+          pointer-events: none;
+          opacity: 0.5;
+        }
+      </style>
+    </noscript>
+
     <div class="field">
       <div class="field-label" id="output-label">Output</div>
       <textarea id="output" placeholder="Deobfuscated code will appear here..." spellcheck="false" readonly></textarea>
