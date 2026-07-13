@@ -28,11 +28,11 @@ Always declare the font stack once as `--mono` and reference it with `font-famil
 
 ## Typography
 
-- Font: **IBM Plex Mono** for everything (headings, body, UI, buttons) — loaded via Google Fonts:
+- Font: **IBM Plex Mono** for everything (headings, body, UI, buttons) — self-hosted locally from `/fonts` (no runtime request to Google Fonts):
   ```html
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="fonts/ibm-plex-mono.css" rel="stylesheet">
   ```
+  (from a page inside `subpage/`, use `../fonts/ibm-plex-mono.css` instead). The stylesheet declares `@font-face` for weights 400/500/600/700 pointing at the `.woff2` files in `/fonts`.
 - No serif, no secondary display face — monospace is the whole personality of this theme.
 - `html, body` set `font-family: var(--mono)` and nothing else font-related (no default `font-size`/`line-height` on body). Every text element declares its own `font-size` explicitly — this is deliberate, don't rely on inheritance, or pages will drift out of sync with each other.
 - Title (`h1`): exactly 30px, weight 700, near-white (`#f2f4f8`), letter-spacing `-0.01em`, `margin: 0 0 12px`.
