@@ -170,6 +170,13 @@
     transform: translateY(1px);
   }
 
+  .noscript-warning {
+    text-align: center;
+    font-size: 12px;
+    color: var(--amber-dim);
+    margin: 0 0 12px;
+  }
+
 </style>
 </head>
 <body>
@@ -186,10 +193,6 @@
       <textarea id="input" placeholder="Paste obfuscated code here..." spellcheck="false"></textarea>
     </div>
 
-    <div class="actions">
-      <button id="run">&gt;_ deobfuscate</button>
-    </div>
-
     <noscript>
       <style>
         button#run {
@@ -197,7 +200,12 @@
           opacity: 0.5;
         }
       </style>
+      <p class="noscript-warning">// javascript is disabled thus so is this tool</p>
     </noscript>
+
+    <div class="actions">
+      <button id="run">&gt;_ deobfuscate</button>
+    </div>
 
     <div class="field">
       <div class="field-label" id="output-label">Output</div>
